@@ -12,92 +12,28 @@ body {
   scroll-behavior: smooth;
 }
 
-/* === NAVBAR === */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 3rem;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.logo {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #0047AB;
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s;
-}
-
-.navbar a:hover {
-  color: #0047AB;
-}
-
-/* === HERO === */
-.hero {
-  height: 90vh;
-  background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-}
-
-.hero .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
-
 /* === EQUIPE === */
 .team {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   gap: 2rem;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding: 1rem;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .member {
   background: white;
   padding: 1rem;
   border-radius: 1rem;
-  width: 250px;
+  width: 180px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
 }
 
 .member img {
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  margin-bottom: 0.8rem;
 }
 
 /* === MENTORIE-SE === */
@@ -106,61 +42,47 @@ body {
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 .icon-card {
   background: white;
-  padding: 2rem;
   border-radius: 1rem;
-  width: 260px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
+  width: 220px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: 0.3s;
+  text-align: center;
 }
 
 .icon-card:hover {
   transform: translateY(-6px);
-  background: #F9FBFF;
+  background: #f9fbff;
 }
 
-.icon-card i {
-  font-size: 2.5rem;
-  color: #0047AB;
-  margin-bottom: 0.8rem;
+.icon-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
 }
 
 .icon-card h3 {
   color: #0047AB;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /* === SUBPÁGINAS === */
 .subpage {
-  margin-top: 2rem;
   background: white;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  animation: fadeIn 0.4s ease;
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .hidden {
   display: none;
-}
-
-.subpage ul {
-  list-style: none;
-  margin-top: 1rem;
-}
-
-.subpage li {
-  margin: 0.7rem 0;
-}
-
-.subpage li i {
-  color: #0047AB;
-  margin-right: 0.5rem;
 }
 
 .back-btn {
@@ -178,9 +100,14 @@ body {
   color: #0047AB;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.subpage h3 {
+  color: #0047AB;
+  margin-bottom: 1rem;
+}
+
+/* === CONTATO E AGRADECIMENTO === */
+.small-text {
+  font-size: 0.9rem;
 }
 
 /* === RODAPÉ === */
@@ -188,6 +115,6 @@ footer {
   background: #0047AB;
   color: white;
   text-align: center;
-  padding: 1.2rem;
-  margin-top: 3rem;
+  padding: 1rem;
+  margin-top: 2rem;
 }
