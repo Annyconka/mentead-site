@@ -48,34 +48,22 @@ body {
   color: #0047AB;
 }
 
-.navbar i {
-  color: #0047AB;
-  font-size: 1.3rem;
-  transition: 0.3s;
-}
-
-.navbar i:hover {
-  color: #B4FF00;
-  transform: scale(1.2);
-}
-
 /* === HERO === */
 .hero {
   height: 90vh;
   background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
   color: #fff;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  position: relative;
 }
 
 .hero .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0,0,0,0.55);
 }
 
 .hero-content {
@@ -83,75 +71,33 @@ body {
   z-index: 1;
 }
 
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.btn {
-  background: #0047AB;
-  color: #fff;
-  padding: 0.8rem 1.6rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #B4FF00;
-  color: #0047AB;
-}
-
-/* === SEÇÕES === */
-.section {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.section.alt {
-  background: #E9EDFF;
-}
-
-.section h2 {
-  color: #0047AB;
-  margin-bottom: 1.5rem;
-}
-
-.section p {
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  line-height: 1.6;
-}
-
 /* === EQUIPE === */
 .team {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   gap: 2rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 1rem;
 }
 
 .member {
   background: white;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 1rem;
   width: 250px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  text-align: center;
 }
 
-.member:hover {
-  transform: translateY(-6px);
-}
-
-.member h3 {
-  color: #0047AB;
+.member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
 /* === MENTORIE-SE === */
@@ -168,124 +114,80 @@ body {
   border-radius: 1rem;
   width: 260px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: 0.3s;
+  text-align: center;
   cursor: pointer;
+  transition: transform 0.3s;
 }
 
 .icon-card:hover {
-  background: #F2F6FA;
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  background: #F9FBFF;
 }
 
 .icon-card i {
   font-size: 2.5rem;
-  color: #A78BFA;
-  margin-bottom: 1rem;
+  color: #0047AB;
+  margin-bottom: 0.8rem;
 }
 
 .icon-card h3 {
   color: #0047AB;
+  font-size: 1.2rem;
+}
+
+/* === SUBPÁGINAS === */
+.subpage {
+  margin-top: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: fadeIn 0.4s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+.subpage ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.subpage li {
+  margin: 0.7rem 0;
+}
+
+.subpage li i {
+  color: #0047AB;
+  margin-right: 0.5rem;
+}
+
+.back-btn {
+  background: #0047AB;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
   margin-bottom: 1rem;
 }
 
-.icon-card ul {
-  list-style: none;
-  padding: 0;
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.5s ease;
-}
-
-.icon-card ul.show {
-  max-height: 400px;
-}
-
-.icon-card li {
-  margin: 0.5rem 0;
-}
-
-.icon-card li i {
-  margin-right: 0.5rem;
+.back-btn:hover {
+  background: #B4FF00;
   color: #0047AB;
 }
 
-.icon-card a {
-  color: #0047AB;
-  text-decoration: none;
-}
-
-.icon-card a:hover {
-  color: #B4FF00;
-}
-
-/* === ANIMAÇÕES DE ENTRADA === */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* === RODAPÉ === */
 footer {
   background: #0047AB;
-  color: #fff;
+  color: white;
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.2rem;
+  margin-top: 3rem;
 }
-
-/* === CONTATO === */
-.contact-info {
-  margin: 2rem auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.contact-info i {
-  color: #0047AB;
-  margin-right: 0.5rem;
-}
-
-.contact-info a {
-  color: #0047AB;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.contact-info a:hover {
-  color: #B4FF00;
-}
-
-.professor {
-  margin-top: 2rem;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.professor h3 {
-  color: #0047AB;
-  margin-bottom: 0.5rem;
-}
-
-.professor a {
-  color: #A78BFA;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.professor a:hover {
-  color: #B4FF00;
-}
-
-
