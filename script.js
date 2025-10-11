@@ -40,3 +40,18 @@ function openSubpage(type) {
 function closeSubpage() {
   document.getElementById("subpage").classList.add("hidden");
 }
+
+// === Efeito de Fade e Slide nas seções ===
+const faders = document.querySelectorAll(".fade-in, .slide-up");
+
+const appearOptions = { threshold: 0.2 };
+
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("visible");
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(el => appearOnScroll.observe(el));
