@@ -9,67 +9,106 @@
 body {
   background-color: #F2F6FA;
   color: #222;
+  text-align: center;
   scroll-behavior: smooth;
+}
+
+section {
+  padding: 6rem 2rem;
+}
+
+/* === HERO === */
+.hero {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #0047AB, #007bff);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.btn-modern {
+  background: linear-gradient(90deg, #B4FF00, #86EFAC);
+  color: #0047AB;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-modern:hover {
+  transform: scale(1.08);
+  background: linear-gradient(90deg, #86EFAC, #B4FF00);
 }
 
 /* === EQUIPE === */
 .team {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  align-items: flex-start;
+  gap: 3rem;
   flex-wrap: wrap;
-  text-align: center;
 }
 
 .member {
   background: white;
-  padding: 1rem;
+  padding: 1.2rem;
   border-radius: 1rem;
-  width: 180px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.member:hover {
+  transform: translateY(-5px);
 }
 
 .member img {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   margin-bottom: 0.8rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
 /* === MENTORIE-SE === */
 .icons-grid {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 3rem;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .icon-card {
   background: white;
   border-radius: 1rem;
-  width: 220px;
-  padding: 1.5rem;
+  width: 240px;
+  padding: 2rem 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   cursor: pointer;
-  transition: 0.3s;
-  text-align: center;
+  transition: all 0.3s ease;
 }
 
 .icon-card:hover {
-  transform: translateY(-6px);
-  background: #f9fbff;
+  transform: translateY(-8px);
+  background: #f8fbff;
 }
 
 .icon-card img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 0.5rem;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
 }
 
 .icon-card h3 {
   color: #0047AB;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 /* === SUBPÁGINAS === */
@@ -77,7 +116,7 @@ body {
   background: white;
   padding: 2rem;
   border-radius: 1rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -100,12 +139,30 @@ body {
   color: #0047AB;
 }
 
-.subpage h3 {
-  color: #0047AB;
-  margin-bottom: 1rem;
+/* === ANIMAÇÕES === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
 }
 
-/* === CONTATO E AGRADECIMENTO === */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-up {
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === CONTATO === */
 .small-text {
   font-size: 0.9rem;
 }
@@ -114,7 +171,6 @@ body {
 footer {
   background: #0047AB;
   color: white;
+  padding: 1.2rem;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
 }
