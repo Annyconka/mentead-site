@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MentEAD</title>
+  <title>MentEAD | Sua bússola na Faculdade de Tecnologia</title>
+  <meta name="description" content="Cursos, leituras e ferramentas para impulsionar seu aprendizado em tecnologia.">
   <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a2f0ad69a3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <!-- Navbar -->
   <header class="navbar">
@@ -15,12 +18,20 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#quem-somos">Quem Somos</a></li>
         <li><a href="#mentorie-se">Mentorie-se</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li>
+          <a href="https://www.instagram.com/uaeadtecufrpe/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/@uaeadtecufrpe" target="_blank"><i class="fab fa-youtube"></i></a>
+        </li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
+  <!-- Hero -->
+  <section id="home" class="hero fade-in">
+    <div class="overlay"></div>
     <div class="hero-content">
       <h1>Sua Bússola na Faculdade de Tecnologia</h1>
       <p>Cursos, leituras e ferramentas para impulsionar seu aprendizado</p>
@@ -29,28 +40,101 @@
   </section>
 
   <!-- Quem Somos -->
-  <section id="quem-somos" class="section">
+  <section id="quem-somos" class="section fade-in">
     <h2>Quem está por trás do MentEAD</h2>
     <p>
       Somos estudantes e profissionais apaixonados por tecnologias e educação.
       Criamos o MentEAD para ajudar outros alunos a encontrarem os melhores
       materiais para se desenvolverem, sem perder tempo!
     </p>
+
+    <div class="team">
+      <div class="member">
+        <h3>Anny Silva</h3>
+        <p>Jornalista e estudante de Licenciatura em Computação</p>
+      </div>
+      <div class="member">
+        <h3>Thomas Alves</h3>
+        <p>Matemático e estudante de Licenciatura em Computação</p>
+      </div>
+      <div class="member">
+        <h3>Nailson Mendonça</h3>
+        <p>Matemático e estudante de Licenciatura em Computação</p>
+      </div>
+    </div>
   </section>
 
   <!-- Mentorie-se -->
-  <section id="mentorie-se" class="section alt">
+  <section id="mentorie-se" class="section alt fade-in">
     <h2>Mentorie-se</h2>
+    <p>Explore nossa curadoria de conteúdos e acelere seu aprendizado com recursos pensados
+      para estudantes de tecnologia.</p>
+
+    <div class="icons-grid">
+      <!-- Cursos -->
+      <div class="icon-card" onclick="toggleList('cursos')">
+        <i class="fas fa-play-circle"></i>
+        <h3>Vídeo Aulas</h3>
+        <ul id="cursos" class="expandable">
+          <li><i class="fas fa-video"></i> <a href="https://www.cursoemvideo.com" target="_blank">Curso em Vídeo</a></li>
+          <li><i class="fas fa-laptop-code"></i> <a href="https://www.coursera.org" target="_blank">Coursera</a></li>
+          <li><i class="fas fa-graduation-cap"></i> <a href="https://app.becas-santander.com/pt-BR" target="_blank">Santander Bolsas</a></li>
+        </ul>
+      </div>
+
+      <!-- Artigos -->
+      <div class="icon-card" onclick="toggleList('artigos')">
+        <i class="fas fa-file-alt"></i>
+        <h3>Artigos e Arquivos</h3>
+        <ul id="artigos" class="expandable">
+          <li><i class="fas fa-book-open"></i> <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=6170859" target="_blank">A utilização das tecnologias digitais na educação</a></li>
+          <li><i class="fas fa-newspaper"></i> <a href="https://publicacoes.unicid.edu.br/ambienteeducacao/article/view/1349" target="_blank">Ambiente Educação – Tecnologias e Práticas Educacionais</a></li>
+          <li><i class="fas fa-scroll"></i> <a href="http://educa.fcc.org.br/scielo.php?pid=S1982-03052018000200299&script=sci_arttext" target="_blank">Educação e Tecnologia no contexto escolar</a></li>
+          <li><i class="fas fa-lightbulb"></i> <a href="https://revistas.usp.br/rmrp/article/view/169288" target="_blank">Reflexões sobre o uso de tecnologias digitais no ensino</a></li>
+        </ul>
+      </div>
+
+      <!-- Ferramentas -->
+      <div class="icon-card" onclick="toggleList('ferramentas')">
+        <i class="fas fa-cogs"></i>
+        <h3>Ferramentas de Estudo</h3>
+        <ul id="ferramentas" class="expandable">
+          <li><i class="fas fa-robot"></i> <a href="https://www.chatpdf.com" target="_blank">ChatPDF</a></li>
+          <li><i class="fas fa-comments"></i> <a href="https://chat.openai.com" target="_blank">ChatGPT</a></li>
+          <li><i class="fas fa-paint-brush"></i> <a href="https://www.canva.com" target="_blank">Canva</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section fade-in">
+    <h2>Contato e Agradecimento</h2>
     <p>
-      Explore nossa curadoria de conteúdos e acelere seu aprendizado com recursos pensados
-      para estudantes de tecnologia.
+      Este site foi desenvolvido como parte da disciplina <strong>Webdesign</strong>, no âmbito da 
+      <a href="http://ww5.ead.ufrpe.br/" target="_blank">UAEADTec - UFRPE</a>.
     </p>
-    <button class="btn" id="mentoriaBtn">Explorar</button>
+
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> <a href="mailto:coordenacao.uab@ead.ufrpe.br">coordenacao.uab@ead.ufrpe.br</a></p>
+      <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/558133206103" target="_blank">(81) 3320-6103</a></p>
+      <p><i class="fas fa-globe"></i> <a href="http://ww5.ead.ufrpe.br/" target="_blank">ww5.ead.ufrpe.br</a></p>
+    </div>
+
+    <div class="professor">
+      <h3>Professor Responsável</h3>
+      <p>
+        <strong>Felipe de Brito Lima</strong> — Docente da UAEADTec/UFRPE, orientador da disciplina Webdesign.<br>
+        <a href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=5C6D35C4958D165DFD05CD3171785686.buscatextual_0" target="_blank">
+          <i class="fas fa-id-badge"></i> Currículo Lattes
+        </a>
+      </p>
+    </div>
   </section>
 
   <!-- Rodapé -->
   <footer>
-    <p>© 2025 MentEAD — Todos os direitos reservados.</p>
+    <p>© 2025 MentEAD — Desenvolvido por estudantes da UAEADTec/UFRPE.</p>
   </footer>
 
   <script src="script.js"></script>
