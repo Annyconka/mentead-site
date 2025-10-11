@@ -2,13 +2,50 @@
    MENTead - Script principal
    ================================ */
 
-/* === 1️⃣ Expansão das listas (Mentorie-se) === */
-function toggleList(id) {
-  const list = document.getElementById(id);
-  list.classList.toggle("show");
+/* === Subpáginas dinâmicas (Mentorie-se) === */
+function openSubpage(type) {
+  const subpage = document.getElementById("subpage");
+  const content = document.getElementById("subpage-content");
+  subpage.classList.remove("hidden");
+
+  let html = "";
+
+  if (type === "cursos") {
+    html = `
+      <h3><i class="fas fa-play-circle"></i> Cursos</h3>
+      <ul>
+        <li><i class="fas fa-video"></i> <a href="https://www.cursoemvideo.com" target="_blank">Curso em Vídeo</a></li>
+        <li><i class="fas fa-laptop-code"></i> <a href="https://www.coursera.org" target="_blank">Coursera</a></li>
+        <li><i class="fas fa-graduation-cap"></i> <a href="https://app.becas-santander.com/pt-BR" target="_blank">Santander Bolsas</a></li>
+      </ul>`;
+  } else if (type === "artigos") {
+    html = `
+      <h3><i class="fas fa-file-pdf"></i> Artigos e Arquivos</h3>
+      <ul>
+        <li><i class="fas fa-book-open"></i> <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=6170859" target="_blank">A utilização das tecnologias digitais na educação</a></li>
+        <li><i class="fas fa-newspaper"></i> <a href="https://publicacoes.unicid.edu.br/ambienteeducacao/article/view/1349" target="_blank">Ambiente Educação – Tecnologias e Práticas Educacionais</a></li>
+        <li><i class="fas fa-scroll"></i> <a href="http://educa.fcc.org.br/scielo.php?pid=S1982-03052018000200299&script=sci_arttext" target="_blank">Educação e Tecnologia no contexto escolar</a></li>
+        <li><i class="fas fa-lightbulb"></i> <a href="https://revistas.usp.br/rmrp/article/view/169288" target="_blank">Reflexões sobre o uso de tecnologias digitais no ensino</a></li>
+      </ul>`;
+  } else if (type === "ferramentas") {
+    html = `
+      <h3><i class="fas fa-tools"></i> Ferramentas de Estudo</h3>
+      <ul>
+        <li><i class="fas fa-robot"></i> <a href="https://www.chatpdf.com" target="_blank">ChatPDF</a></li>
+        <li><i class="fas fa-comments"></i> <a href="https://chat.openai.com" target="_blank">ChatGPT</a></li>
+        <li><i class="fas fa-paint-brush"></i> <a href="https://www.canva.com" target="_blank">Canva</a></li>
+      </ul>`;
+  }
+
+  content.innerHTML = html;
+  window.scrollTo({ top: subpage.offsetTop - 100, behavior: "smooth" });
 }
 
-/* === 2️⃣ Animação de entrada (Fade-in ao rolar) === */
+function closeSubpage() {
+  document.getElementById("subpage").classList.add("hidden");
+}
+
+/* === Fade-in Animation === */
 const faders = document.querySelectorAll(".fade-in");
 const appearOptions = { threshold: 0.2 };
 
@@ -24,13 +61,12 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
-/* === 3️⃣ Botão Voltar ao Topo === */
+/* === Botão Voltar ao Topo === */
 const backToTopBtn = document.createElement("button");
 backToTopBtn.innerHTML = "⬆️";
 backToTopBtn.id = "backToTop";
 document.body.appendChild(backToTopBtn);
 
-// Estilo do botão criado dinamicamente
 backToTopBtn.style.position = "fixed";
 backToTopBtn.style.bottom = "25px";
 backToTopBtn.style.right = "25px";
@@ -46,16 +82,10 @@ backToTopBtn.style.display = "none";
 backToTopBtn.style.boxShadow = "0 3px 8px rgba(0,0,0,0.3)";
 backToTopBtn.style.transition = "all 0.3s ease";
 
-// Mostrar botão quando rolar a página
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    backToTopBtn.style.display = "block";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
+  backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
 });
 
-// Ação de rolagem suave até o topo
 backToTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
