@@ -28,30 +28,30 @@
   <!-- Hero -->
   <section id="home" class="hero fade-in">
     <div class="overlay"></div>
-    <div class="hero-content">
+    <div class="hero-content slide-up">
       <h1>Sua Bússola na Faculdade de Tecnologia</h1>
       <p>Cursos, leituras e ferramentas para impulsionar seu aprendizado</p>
-      <a href="#mentorie-se" class="btn">Começar</a>
+      <a href="#mentorie-se" class="btn-modern">Começar</a>
     </div>
   </section>
 
   <!-- Quem Somos -->
-  <section id="quem-somos" class="section fade-in">
+  <section id="quem-somos" class="section fade-in slide-up">
     <h2>Quem está por trás do MentEAD</h2>
     <p>Somos estudantes e profissionais apaixonados por tecnologia e educação. Criamos o MentEAD para ajudar outros alunos a encontrarem os melhores materiais para se desenvolverem sem perder tempo!</p>
 
     <div class="team">
-      <div class="member">
+      <div class="member fade-in">
         <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Anny" alt="Anny Silva">
         <h3>Anny Silva</h3>
         <p>Jornalista e estudante de Licenciatura em Computação</p>
       </div>
-      <div class="member">
+      <div class="member fade-in">
         <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Thomas" alt="Thomas Alves">
         <h3>Thomas Alves</h3>
         <p>Matemático e estudante de Licenciatura em Computação</p>
       </div>
-      <div class="member">
+      <div class="member fade-in">
         <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Nailson" alt="Nailson Mendonça">
         <h3>Nailson Mendonça</h3>
         <p>Matemático e estudante de Licenciatura em Computação</p>
@@ -60,26 +60,25 @@
   </section>
 
   <!-- Mentorie-se -->
-  <section id="mentorie-se" class="section alt fade-in">
+  <section id="mentorie-se" class="section alt fade-in slide-up">
     <h2>Mentorie-se</h2>
     <p>Explore nossa curadoria de conteúdos e acelere seu aprendizado com recursos pensados para estudantes de tecnologia.</p>
 
     <div class="icons-grid">
-      <div class="icon-card" onclick="openSubpage('cursos')">
+      <div class="icon-card fade-in" onclick="openSubpage('cursos')">
         <img src="https://cdn-icons-png.flaticon.com/512/727/727245.png" alt="Cursos">
-        <h3>Cursos</h3>
+        <h3><i class="fas fa-play"></i> Cursos</h3>
       </div>
-      <div class="icon-card" onclick="openSubpage('artigos')">
+      <div class="icon-card fade-in" onclick="openSubpage('artigos')">
         <img src="https://cdn-icons-png.flaticon.com/512/2991/2991108.png" alt="Artigos">
-        <h3>Artigos e Arquivos</h3>
+        <h3><i class="fas fa-book"></i> Artigos e Arquivos</h3>
       </div>
-      <div class="icon-card" onclick="openSubpage('ferramentas')">
+      <div class="icon-card fade-in" onclick="openSubpage('ferramentas')">
         <img src="https://cdn-icons-png.flaticon.com/512/4712/4712103.png" alt="Ferramentas">
-        <h3>Ferramentas de Estudo</h3>
+        <h3><i class="fas fa-tools"></i> Ferramentas de Estudo</h3>
       </div>
     </div>
 
-    <!-- Subpáginas internas -->
     <div id="subpage" class="subpage hidden">
       <button class="back-btn" onclick="closeSubpage()"><i class="fas fa-arrow-left"></i> Voltar</button>
       <div id="subpage-content"></div>
@@ -87,7 +86,7 @@
   </section>
 
   <!-- Contato -->
-  <section id="contato" class="section fade-in">
+  <section id="contato" class="section fade-in slide-up">
     <h2>Contato e Agradecimento</h2>
     <p class="small-text">Este site foi desenvolvido como parte da disciplina <strong>Webdesign</strong>, no âmbito da 
       <a href="http://ww5.ead.ufrpe.br/" target="_blank">UAEADTec - UFRPE</a>.</p>
@@ -100,7 +99,7 @@
 
     <div class="professor small-text">
       <h3>Professor Responsável</h3>
-      <p><strong>Felipe de Brito Lima</strong> — Docente da UAEADTec/UFRPE, orientador da disciplina Webdesign.<br>
+      <p><strong>Felipe de Brito Lima</strong> — Docente da UAEADTec/UFRPE.<br>
         <a href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do" target="_blank">
           <i class="fas fa-id-badge"></i> Currículo Lattes
         </a>
@@ -108,7 +107,6 @@
     </div>
   </section>
 
-  <!-- Rodapé -->
   <footer>
     <p>© 2025 MentEAD — Desenvolvido por estudantes da UAEADTec/UFRPE.</p>
   </footer>
