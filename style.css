@@ -39,20 +39,16 @@ section {
 }
 
 .home-banner {
-  width: 90%;
-  max-width: 900px;
+  width: 100%;
   height: auto;
-  border-radius: 1rem;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
   display: block;
 }
 
-/* botão sobre a imagem */
 .btn-modern {
   position: absolute;
-  bottom: 12%; /* mais próximo da seta */
-  left: 50%;   /* centraliza horizontalmente */
-  transform: translateX(-50%);
+  bottom: 16%; /* ajusta altura vertical */
+  left: 38%;   /* ajusta posição horizontal */
+  transform: translate(-50%, 0);
   background: linear-gradient(90deg, #B4FF00, #86EFAC);
   color: #0047AB;
   padding: 1rem 2rem;
@@ -61,14 +57,13 @@ section {
   text-decoration: none;
   font-size: 1.1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .btn-modern:hover {
-  transform: translateX(-50%) scale(1.08);
+  transform: translate(-50%, -5px);
   background: linear-gradient(90deg, #86EFAC, #B4FF00);
 }
-
 
 
 /* === EQUIPE === */
@@ -199,6 +194,7 @@ footer {
   padding: 1.2rem;
   text-align: center;
 }
+
 
 
 
