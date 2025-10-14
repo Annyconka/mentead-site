@@ -19,34 +19,38 @@ section {
 
 /* === HERO === */
 .hero {
-  min-height: 100vh;
-  background-color: #1E3A8A; /* Azul Cobalto do tema */
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   text-align: center;
+  background-color: #1E3A8A;
+  padding: 4rem 0;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  display: inline-block;
 }
 
 .home-banner {
-  max-width: 80%;
+  width: 90%;
+  max-width: 900px;
   height: auto;
   border-radius: 1rem;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
 }
 
-/* === Botão sobre a imagem === */
+/* === BOTÃO SOBRE A IMAGEM === */
 .btn-modern {
   position: absolute;
-  bottom: 12%;     /* aproxima da seta */
-  left: 42%;       /* move para a esquerda da seta */
+  bottom: 10%;   /* aproxima da seta */
+  left: 40%;     /* ajusta horizontalmente — pode alterar esse valor */
   transform: translateX(-50%);
   background: linear-gradient(90deg, #B4FF00, #86EFAC);
   color: #0047AB;
@@ -193,5 +197,6 @@ footer {
   padding: 1.2rem;
   text-align: center;
 }
+
 
 
