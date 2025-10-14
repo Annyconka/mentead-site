@@ -44,13 +44,14 @@ section {
   height: auto;
   border-radius: 1rem;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  display: block;
 }
 
-/* === BOTÃO SOBRE A IMAGEM === */
+/* botão sobre a imagem */
 .btn-modern {
   position: absolute;
-  bottom: 10%;   /* aproxima da seta */
-  left: 40%;     /* ajusta horizontalmente — pode alterar esse valor */
+  bottom: 12%; /* mais próximo da seta */
+  left: 50%;   /* centraliza horizontalmente */
   transform: translateX(-50%);
   background: linear-gradient(90deg, #B4FF00, #86EFAC);
   color: #0047AB;
@@ -67,6 +68,7 @@ section {
   transform: translateX(-50%) scale(1.08);
   background: linear-gradient(90deg, #86EFAC, #B4FF00);
 }
+
 
 
 /* === EQUIPE === */
@@ -197,6 +199,7 @@ footer {
   padding: 1.2rem;
   text-align: center;
 }
+
 
 
 
