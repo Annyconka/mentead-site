@@ -42,7 +42,12 @@ section {
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
 }
 
+/* === Botão sobre a imagem === */
 .btn-modern {
+  position: absolute;
+  bottom: 12%;     /* aproxima da seta */
+  left: 42%;       /* move para a esquerda da seta */
+  transform: translateX(-50%);
   background: linear-gradient(90deg, #B4FF00, #86EFAC);
   color: #0047AB;
   padding: 1rem 2rem;
@@ -55,9 +60,10 @@ section {
 }
 
 .btn-modern:hover {
-  transform: scale(1.08);
+  transform: translateX(-50%) scale(1.08);
   background: linear-gradient(90deg, #86EFAC, #B4FF00);
 }
+
 
 /* === EQUIPE === */
 .team {
@@ -187,4 +193,5 @@ footer {
   padding: 1.2rem;
   text-align: center;
 }
+
 
